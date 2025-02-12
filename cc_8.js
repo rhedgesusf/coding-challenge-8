@@ -27,3 +27,21 @@ const calculateDiscount = function(price, discountRate) {
 
 calculateDiscount(100, 0.2);
 calculateDiscount(250, 0.15);
+
+/////////////////////////////////
+// Task 3:  //
+/////////////////////////////////
+
+console.log("--------------------------------------");
+console.log("Task 2: Function Expression");
+
+const calculateServiceFee = (amount, serviceType) => {
+    let feeRates = { "Basic": .05, "Standard": .1, "Premium": .15 };
+    let fee = feeRates[serviceType] * amount;
+    
+    console.log(`Service Fee:  $${fee.toFixed(2)}`);
+};
+
+calculateServiceFee(200, "Premium");
+calculateServiceFee(500, "Standard"); 
+
