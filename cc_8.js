@@ -29,11 +29,11 @@ calculateDiscount(100, 0.2);
 calculateDiscount(250, 0.15);
 
 /////////////////////////////////
-// Task 3:  //
+// Task 3: Arrow Function //
 /////////////////////////////////
 
 console.log("--------------------------------------");
-console.log("Task 2: Function Expression");
+console.log("Task 3: Arrow Function");
 
 const calculateServiceFee = (amount, serviceType) => {
     let feeRates = { "Basic": .05, "Standard": .1, "Premium": .15 };
