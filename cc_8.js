@@ -115,3 +115,21 @@ function createCartTracker() {
 let cart = createCartTracker();
 console.log(cart(20));
 console.log(cart(35));
+
+/////////////////////////////////////
+// Task 8: Recursion in Javascript //
+/////////////////////////////////////
+
+console.log("--------------------------------------");
+console.log("Task 8: Recursion in Javascript");
+
+function calculateSavings(years, amount) {
+    if (years < 10)
+    {
+        return calculateSavings(years + 1, amount * 1.05);
+    }
+    return amount.toFixed(2);
+}
+
+console.log(`Projected Savings(8, 1000): $${calculateSavings(8, 1000)}`);
+console.log(`Projected Savings(5, 5000): $${calculateSavings(5, 5000)}`);
