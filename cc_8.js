@@ -64,9 +64,9 @@ function calculateRentalCost(days, carType, insurance = false) {
 calculateRentalCost(3, "Economy", true);
 calculateRentalCost(5, "Luxury", false);
 
-///////////////////////////////
+//////////////////////////////
 // Task 5: Returning Values //
-///////////////////////////////
+//////////////////////////////
 
 console.log("--------------------------------------");
 console.log("Task 5: Returning Values");
@@ -79,3 +79,19 @@ function calculateLoanPayment(principal, rate, time) {
 
 calculateLoanPayment(1000, 0.05, 2);
 calculateLoanPayment(5000, 0.07, 3);
+
+////////////////////////////////////
+// Task 6: Higher-Order Functions //
+////////////////////////////////////
+
+console.log("--------------------------------------");
+console.log("Task 6: Higher-Order Functions");
+
+function filterLargeTransactions(transactions, filterFunction) {
+    let filteredTransactions = transactions.filter(filterFunction);
+    console.log(`Filter Transactions: `, filteredTransactions)
+}
+
+let transactions = [200, 1500, 3200, 800, 2500];
+
+filterLargeTransactions(transactions, amount => amount > 1000);
