@@ -95,3 +95,23 @@ function filterLargeTransactions(transactions, filterFunction) {
 let transactions = [200, 1500, 3200, 800, 2500];
 
 filterLargeTransactions(transactions, amount => amount > 1000);
+
+//////////////////////
+// Task 7: Closures //
+//////////////////////
+
+console.log("--------------------------------------");
+console.log("Task 7: Closures");
+
+function createCartTracker() {
+    let totalCart = 0;
+    
+    return function(val) {
+        totalCart += val;
+        return `Total Cart Value: $${totalCart}`;
+    };
+}
+
+let cart = createCartTracker();
+console.log(cart(20));
+console.log(cart(35));
