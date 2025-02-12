@@ -28,9 +28,9 @@ const calculateDiscount = function(price, discountRate) {
 calculateDiscount(100, 0.2);
 calculateDiscount(250, 0.15);
 
-/////////////////////////////////
+////////////////////////////
 // Task 3: Arrow Function //
-/////////////////////////////////
+////////////////////////////
 
 console.log("--------------------------------------");
 console.log("Task 3: Arrow Function");
@@ -44,4 +44,23 @@ const calculateServiceFee = (amount, serviceType) => {
 
 calculateServiceFee(200, "Premium");
 calculateServiceFee(500, "Standard"); 
+
+//////////////////////////////////////
+// Task 4: Parameters and Arguments //
+//////////////////////////////////////
+
+console.log("--------------------------------------");
+console.log("Task 4: Parameters and Arguments");
+
+function calculateRentalCost(days, carType, insurance = false) {
+    let rentRates = { "Economy": 40, "Standard": 60, "Luxury": 100 }
+    let cost = (days * rentRates[carType]);
+    if (insurance) {
+        cost += days * 20;
+    }
+    console.log(`Total Rental Cost: $${cost.toFixed(2)}`) 
+}
+
+calculateRentalCost(3, "Economy", true);
+calculateRentalCost(5, "Luxury", false);
 
